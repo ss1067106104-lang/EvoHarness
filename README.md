@@ -38,7 +38,7 @@ EvoHarness 是一个基于 Python 实现的 **自进化 Harness Agent**。它不
 ## 目录结构
 
 ```text
-BearAgent/
+Agent/
 ├── agents/
 │   ├── main.py                    # CLI 入口、REPL、参数解析
 │   ├── agent.py                   # Agent Runtime、模型调用、工具调度、上下文压缩
