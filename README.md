@@ -159,17 +159,17 @@ Bear Code 的核心特色是 **自进化 Skills**。它可以从用户明确反�
 
 ### 1\. 开启自动自进化
 
-默认 `BEAR\\\_AUTO\\\_SKILL\\\_EVOLUTION` 是开启的。为了明确配置，建议在 `.env` 中写：
+默认 `_AUTO\\\_SKILL\\\_EVOLUTION` 是开启的。为了明确配置，建议在 `.env` 中写：
 
 ```env
-BEAR\\\_AUTO\\\_SKILL\\\_EVOLUTION=1
-BEAR\\\_AUTO\\\_SKILL\\\_TARGET=project
+_AUTO\\\_SKILL\\\_EVOLUTION=1
+_AUTO\\\_SKILL\\\_TARGET=project
 ```
 
 含义：
 
-* `BEAR\\\_AUTO\\\_SKILL\\\_EVOLUTION=1`：启用在线 Skill 自进化。
-* `BEAR\\\_AUTO\\\_SKILL\\\_TARGET=project`：自动新增的 Skill 写入当前项目 `.bear/skills/`。
+*_AUTO\\\_SKILL\\\_EVOLUTION=1`：启用在线 Skill 自进化。
+*_AUTO\\\_SKILL\\\_TARGET=project`：自动新增的 Skill 写入当前项目 `.bear/skills/`。
 
 如果希望沉淀为所有项目共享的个人 Skill：
 
@@ -360,13 +360,13 @@ Skill 和 Memory 的区别：
 
 ## MCP 支持
 
-Bear Code 支持 MCP 外部工具扩展。MCP Server 可以通过 stdio JSON-RPC 暴露工具，Bear Code 会将其包装为 Agent 可调用工具。
+本项目支持 MCP 外部工具扩展。MCP Server 可以通过 stdio JSON-RPC 暴露工具，Bear Code 会将其包装为 Agent 可调用工具。
 
 配置来源：
 
 ```text
-\\\~/.bear/settings.json
-<project>/.bear/settings.json
+\\\settings.json
+<project>settings.json
 <project>/.mcp.json
 ```
 
@@ -426,13 +426,13 @@ docker run --rm -it \\\\
 
 |数据|路径|
 |-|-|
-|项目级 Skills|`.bear/skills/<skill\\\_name>/SKILL.md`|
-|用户级 Skills|`\\\~/.bear/skills/<skill\\\_name>/SKILL.md`|
-|Skills 自进化审计|`.bear/skill-evolution/`|
-|长期记忆|`\\\~/.BearCode/projects/<project\\\_hash>/memory/`|
-|会话历史|`\\\~/.bear-code/sessions/`|
-|大工具结果|`\\\~/.bear-code/tool-results/`|
-|Plan Mode 计划|`\\\~/.bear/plans/`|
+|项目级 Skills|`skills/<skill\\\_name>/SKILL.md`|
+|用户级 Skills|`\\\skills/<skill\\\_name>/SKILL.md`|
+|Skills 自进化审计|skill-evolution/`|
+|长期记忆|`\\\~projects/<project\\\_hash>/memory/`|
+|会话历史|`\\\sessions/`|
+|大工具结果|`\\\~tool-results/`|
+|Plan Mode 计划|`\\\~plans/`|
 
 ## 
 
